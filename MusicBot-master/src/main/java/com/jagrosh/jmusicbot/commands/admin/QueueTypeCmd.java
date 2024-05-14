@@ -38,7 +38,7 @@ public class QueueTypeCmd extends AdminCommand
     }
 
     @Override
-    protected void execute(CommandEvent event)
+    public void execute(CommandEvent event)
     {
         String args = event.getArgs();
         QueueType value;
