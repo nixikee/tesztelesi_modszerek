@@ -1,4 +1,4 @@
-package mate_tests;
+package com.jagrosh.jmusicbot.sajat;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
