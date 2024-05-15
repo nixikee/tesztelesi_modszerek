@@ -1,4 +1,4 @@
-package com.jagrosh.jmusicbot.sajat;
+package com.jagrosh.jmusicbot.sajat.entities;
 
 import org.junit.Test;
 import static org.junit.Assert.*;

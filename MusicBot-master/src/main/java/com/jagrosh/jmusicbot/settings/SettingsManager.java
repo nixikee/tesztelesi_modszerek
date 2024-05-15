@@ -33,7 +33,7 @@ import org.slf4j.LoggerFactory;
 public class SettingsManager implements GuildSettingsManager<Settings>
 {
     private final static String SETTINGS_FILE = "serversettings.json";
-    private final HashMap<Long,Settings> settings;
+    public final HashMap<Long,Settings> settings;
 
     public SettingsManager()
     {
@@ -93,12 +93,12 @@ public class SettingsManager implements GuildSettingsManager<Settings>
         return settings.computeIfAbsent(guildId, id -> createDefaultSettings());
     }
 
-    private Settings createDefaultSettings()
+    public Settings createDefaultSettings()
     {
         return new Settings(this, 0, 0, 0, 100, null, RepeatMode.OFF, null, -1, QueueType.FAIR);
     }
 
-    protected void writeSettings()
+    public void writeSettings()
     {
         JSONObject obj = new JSONObject();
         settings.keySet().stream().forEach(key -> {
